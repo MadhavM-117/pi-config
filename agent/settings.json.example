@@ -1,7 +1,10 @@
 {
-  "lastChangelogVersion": "0.56.1",
-  "defaultProvider": "anthropic",
-  "defaultModel": "claude-sonnet-4-6",
+  "lastChangelogVersion": "0.75.5",
+  "defaultProvider": "openrouter",
+  "defaultModel": "openrouter/deepseek/deepseek-v4-flash",
   "defaultThinkingLevel": "high",
-  "skills": []
+  "enabledModels": [
+    "openrouter/deepseek/deepseek-v4-flash",
+    "openrouter/deepseek/deepseek-v4-pro"
+  ]
 }

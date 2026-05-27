@@ -54,7 +54,7 @@ Or set the `PI_DIR` environment variable to point to this directory.
 ## Configuration
 
 - **Default Provider**: OpenRouter
-- **Default Model**: minimax/minimax-m2.5
+- **Default Model**: openrouter/openai/gpt-5.3-codex
 - **Thinking Level**: high
 
 See `agent/settings.json` for all settings.
