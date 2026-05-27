@@ -37,20 +37,8 @@ git diff --stat
 git diff
 ```
 
-### 3. Confirm Scope
 
-**IMPORTANT:** Before proceeding, ask the user:
-
-> I found N modified files. Should I commit:
-> 1. **All modified files** (including ones not mentioned in our conversation)
-> 2. **Only files from our conversation** ([list the specific files])
-> 
-> Files found:
-> - file1 (staged/unstaged)
-> - file2 (staged/unstaged)
-> ...
-
-### 4. Stage Selected Files
+### 3. Stage Selected Files
 
 Based on the user's choice:
 
@@ -62,7 +50,7 @@ git add -A
 git add <file1> <file2> ...
 ```
 
-### 5. Generate Conventional Commit
+### 4. Generate Conventional Commit
 
 Analyze the changes and context to determine the commit type and message:
 
@@ -94,7 +82,7 @@ Analyze the changes and context to determine the commit type and message:
 - No period at the end
 - Keep under 50 characters ideally
 
-### 6. Execute Commit
+### 5. Execute Commit
 
 ```bash
 git commit -m "type(scope): subject" -m "body explaining what and why"
