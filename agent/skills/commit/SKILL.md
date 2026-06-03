@@ -71,7 +71,7 @@ Analyze the changes and context to determine the commit type and message:
 ```
 <type>(<scope>): <subject>
 
-<body> - optional, explains WHAT and WHY
+<body> - keep brief, use bullet list for changes/fixes
 
 <footer> - optional, refs, closes, BREAKING CHANGE notes
 ```
@@ -82,17 +82,30 @@ Analyze the changes and context to determine the commit type and message:
 - No period at the end
 - Keep under 50 characters ideally
 
+**Body Rules:**
+- Keep brief. Prefer a single line or a short bullet list.
+- Bullet list format for listing changes/features/fixes:
+  ```
+  - Bullet one
+  - Bullet two
+  - Bullet three
+  ```
+
 ### 5. Execute Commit
 
 ```bash
-git commit -m "type(scope): subject" -m "body explaining what and why"
+git commit -m "type(scope): subject" -m "- Bullet one
+- Bullet two
+- Bullet three"
 ```
 
 ## Examples
 
-### Feature Addition
+### Feature Addition (multi-line body with bullets)
 ```bash
-git commit -m "feat(auth): add OAuth2 login support" -m "Integrate Google and GitHub OAuth2 providers for authentication. Implements token refresh and secure session management."
+git commit -m "feat(auth): add OAuth2 login support" -m "- Integrate Google and GitHub OAuth2 providers
+- Implement token refresh flow
+- Add secure session management"
 ```
 
 ### Bug Fix
@@ -100,9 +113,18 @@ git commit -m "feat(auth): add OAuth2 login support" -m "Integrate Google and Gi
 git commit -m "fix(api): resolve null pointer on user logout" -m "Added null check before accessing user session data. Prevents crash when session expires before logout."
 ```
 
+### Feature with Multiple Changes (bullet list)
+```bash
+git commit -m "feat(presets): add preset extension with cycle and /preset command" -m "- Introduce preset system for model, thinking, tools, and instructions
+- Add --preset CLI flag, /preset command, Ctrl+Shift+U cycling
+- Support global ~/.pi/agent/presets.json and project-local .pi/presets.json
+- Persist active preset across session turns"
+```
+
 ### Documentation
 ```bash
-git commit -m "docs(README): update installation instructions" -m "Clarify Node.js version requirements and add troubleshooting section for common setup issues."
+git commit -m "docs(README): update installation instructions" -m "- Clarify Node.js version requirements
+- Add troubleshooting section for common setup issues"
 ```
 
 ### Refactor
