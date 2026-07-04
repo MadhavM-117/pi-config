@@ -1,0 +1,20 @@
+{
+  "providers": {
+    "tenstorrent": {
+      "baseUrl": "https://console.tenstorrent.com/v1",
+      "api": "openai-completions",
+      "apiKey": "$TENSTORRENT_API_KEY",
+      "models": [
+        {
+          "id": "moonshotai/Kimi-K2.7-Code",
+          "name": "Kimi K2.7 Code",
+          "reasoning": false,
+          "input": ["text"],
+          "contextWindow": 128000,
+          "maxTokens": 16384,
+          "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 }
+        }
+      ]
+    }
+  }
+}
