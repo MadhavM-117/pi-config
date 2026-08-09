@@ -1,10 +1,10 @@
 {
   "lastChangelogVersion": "0.75.5",
   "defaultProvider": "openrouter",
-  "defaultModel": "openrouter/deepseek/deepseek-v4-flash",
+  "defaultModel": "openrouter/deepseek/deepseek-v4-flash-0731",
   "defaultThinkingLevel": "high",
   "enabledModels": [
-    "openrouter/deepseek/deepseek-v4-flash",
+    "openrouter/deepseek/deepseek-v4-flash-0731",
     "openrouter/deepseek/deepseek-v4-pro"
   ]
 }
