@@ -69,4 +69,9 @@ Custom extensions are included in `agent/extensions/`:
 
 ## Skills
 
-Custom skills can be added to `agent/skills/`. Currently no custom skills configured.
+Custom skills live in `agent/skills/` and load on-demand when their description matches a task:
+
+- `commit` - create conventional commits in git repos
+- `jj-commit` - create conventional commits in jj (Jujutsu) repos
+
+Add new skills as a directory with a `SKILL.md` (name + description frontmatter, then instructions).
