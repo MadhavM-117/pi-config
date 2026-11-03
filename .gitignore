@@ -13,6 +13,11 @@ agent/models-store.json
 # Session files - ephemeral conversation data
 agent/sessions/
 
+# Device-specific: omarchy-managed symlinks and generated theme
+agent/skills/diagnose-crash
+agent/skills/omarchy
+agent/themes/
+
 
 # Agent executables 
 agent/bin/
