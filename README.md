@@ -59,6 +59,14 @@ Or set the `PI_DIR` environment variable to point to this directory.
 
 See `agent/settings.json` for all settings.
 
+## Packages
+
+Installed automatically by pi from the `packages` list in `settings.json`:
+
+- `git:github.com/DietrichGebert/ponytail` — lazy senior dev mode skills (cloned into `agent/git/`, gitignored)
+
+Run `pi` once on a new device to fetch it.
+
 ## Extensions
 
 Custom extensions are included in `agent/extensions/`:
@@ -73,5 +81,10 @@ Custom skills live in `agent/skills/` and load on-demand when their description 
 
 - `commit` - create conventional commits in git repos
 - `jj-commit` - create conventional commits in jj (Jujutsu) repos
+- `annotate` - annotate code with explanatory comments
+- `implement` - implement from a written plan
+- `research` - research a topic before coding
+- `write-plan` - write an implementation plan
+- `ponytail` and friends - from the ponytail package (see Packages)
 
 Add new skills as a directory with a `SKILL.md` (name + description frontmatter, then instructions).

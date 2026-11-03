@@ -17,9 +17,13 @@ agent/sessions/
 # Agent executables 
 agent/bin/
 
+# Packages cloned by pi (settings.json packages list)
+agent/git/
+
 # Node modules (if any extension has npm deps)
 **/node_modules/
 package-lock.json
+agent/npm/package-lock.json
 
 # OS files
 .DS_Store
