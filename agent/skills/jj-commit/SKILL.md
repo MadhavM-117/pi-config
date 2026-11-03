@@ -35,8 +35,7 @@ Describes the jj working-copy change (``@``) with a conventional message, then o
 2. **Build the message:** draft `<type>(<scope>): <subject>` plus body from the diff and conversation, then show it to the user.
 3. **Describe & confirm:** after approval, write the message to ``@``:
    ```bash
-   jj describe -m "type(scope): subject" -m "- bullet
-   - bullet"
+   printf '%s\n' 'type(scope): subject' '' '- bullet' '- bullet' | jj describe --stdin
    ```
 4. **Start the next change:** `jj new` begins a fresh empty change for the next unit of work.
 
@@ -45,17 +44,21 @@ Describes the jj working-copy change (``@``) with a conventional message, then o
 - **Nothing in ``@``?** Stop and ask — describing or `jj new` on an empty change just creates noise.
 - **Mixed/unrelated edits?** Because jj auto-snapshots everything into ``@``, separate concerns *before* describing: `jj split` to break up the change, or `jj restore --from @- <paths>` to drop stray files (resets them to the parent state).
 - **Wrong last message?** Fix with `jj describe` again, or `jj describe -m ""` to blank it; no need to amend the old change.
+- **To describe with a body,** pipe the full message on stdin (works with dash bullets):
+  ```bash
+  printf '%s\n' 'feat(x): subject' '' '- bullet one' '- bullet two' | jj describe --stdin
+  ```
+- **Pushing:** `jj push` does not exist. For a repo with a Git remote: `jj bookmark set <branch> -r @-` (only when `@-` is the change to ship), then `git push origin <branch>`.
 
 ## Examples
 
 ```bash
-jj describe -m "feat(auth): add OAuth2 login support" -m "- Integrate Google and GitHub providers
-- Implement token refresh flow"
+printf '%s\n' 'feat(auth): add OAuth2 login support' '' '- Integrate Google and GitHub providers' '- Implement token refresh flow' | jj describe --stdin
 jj new
 ```
 
 ```bash
-jj describe -m "fix(api): resolve null pointer on logout" -m "Add null check before accessing session data."
+jj describe -m "fix(api): resolve null pointer on logout"
 jj new
 ```
 
