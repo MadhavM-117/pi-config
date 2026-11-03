@@ -6,7 +6,7 @@ user-invocable: true
 argument-hint: [feature or change description]
 ---
 
-You are writing a detailed implementation plan. Do NOT use Claude Code's built-in plan mode. Write the plan directly to a markdown file.
+You are writing a detailed implementation plan. Write the plan directly to a markdown file.
 
 ## Before you begin
 

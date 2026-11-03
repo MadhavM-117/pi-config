@@ -4,11 +4,9 @@
     "git:github.com/DietrichGebert/ponytail"
   ],
   "defaultProvider": "openrouter",
-  "defaultModel": "openrouter/deepseek/deepseek-v4-flash-0731",
+  "defaultModel": "openrouter/z-ai/glm-5.3-flash",
   "defaultThinkingLevel": "high",
   "enabledModels": [
-    "openrouter/deepseek/deepseek-v4-flash-0731",
-    "openrouter/deepseek/deepseek-v4-pro",
-    "openrouter/z-ai/glm-5.2"
+    "openrouter/z-ai/glm-5.3-flash"
   ]
 }
